@@ -1,0 +1,16 @@
+<div class="btn-group m-1" *ngIf="cartItems.length > 0">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Sepetiniz 
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li *ngFor="let cartItem of cartItems">
+            <a class="dropdown-item" href="">
+                <span class="badge bg-secondary">{{cartItem.quantity}}</span>{{cartItem.product.title.substr(0,20)}}
+            </a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item">Sepet Toplamı: {{getCartTotalPrice() | currency:'₺'}}</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item">Sepete Git</a></li>
+    </ul>
+</div>

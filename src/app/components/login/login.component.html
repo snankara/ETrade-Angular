@@ -1,0 +1,18 @@
+<body class="text-center">
+    <main class="form-signin">
+        <form [formGroup]="loginForm">
+        <h1 class="h3 mb-3 fw-normal">Please Sign In</h1>
+
+        <div class="form-floating mb-2">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+            <label for="floatingInput">Email Address</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+            <label for="floatingPassword">Password (5 character)</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" (click)="login()" [disabled]="!loginForm.valid">Sign In</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        </form>
+    </main>    
+</body>

@@ -1,0 +1,9 @@
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Hoşgeldiniz !</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" *ngIf="!isAuthenticated()">Ürünlerimizi görüntüleyebilmek için giriş yapmalısınız.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5" *ngIf="isAuthenticated()">
+        <a type="button" class="btn btn-outline-primary btn-lg px-4 gap-3" [routerLink]="['products']">Ürünlere Git</a>
+      </div>
+    </div>
+</div>
